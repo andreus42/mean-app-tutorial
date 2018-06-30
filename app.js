@@ -32,3 +32,8 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/mean-angular6', { promiseLibrary: require('bluebird') })
+  .then(() =>  console.log('connection successful'))
+  .catch((err) => console.error(err));
