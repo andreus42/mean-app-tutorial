@@ -1,12 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { BookComponent } from './book/book.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { BookCreateComponent } from './book-create/book-create.component';
 import { BookEditComponent } from './book-edit/book-edit.component';
-import { RouterModule, Routes } from '@angular/router';
+
 
 const appRoutes: Routes = [
   {
@@ -48,9 +51,6 @@ const appRoutes: Routes = [
     BookDetailComponent,
     BookCreateComponent,
     BookEditComponent
-  ],
-  imports: [
-    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
